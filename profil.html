@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profil</title>
+<link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+<!-- Logo + Name und Profil bearbeiten -->
+<div id="header">
+<div id="logo">
+<img src="{% static 'design_images/logo.jpg' %}" alt="Logo">
+<span id="logo-text">LearnTogether</span>
+</div>
+<div id="profilbearbeiten">
+<button type="button">
+<a href="{% url 'profil' %}">Profil</a>
+</button>
+</div>
+<div id="logout">
+<button type="button">
+<a href="{% url 'login' %}">Logout</a>
+</button>
+</div>
+</div>
+<!-- Navigation an der Seite -->
+<div id="navigation">
+<a href="{% url 'startseite' %}"><img src="{% static 'design_images/bild_haus.jpg' %}" alt="Home"></a>
+<a href="{% url 'posten' %}"><img src="{% static 'design_images/bild_erstellen.jpg' %}" alt="Hinzufeugen"></a>
+<a href="{% url 'ueber_uns' %}"><img src="{% static 'design_images/bild_ueber_uns.jpg' %}" alt="Benutzer"></a>
+</div>
+
+<!-- Hauptinhalt -->
+<div class="hauptinhalt">
+<div id="profil_kopfzeile">
+<img src="{% static 'design_images/Profilbild.jpg' %}" alt="Profilbild" id="profilbild">
+<div id="profildaten">
+<p><strong>Profilname: </strong>{{ user.vorname }} {{user.nachname}}</p>
+</div>
+<button type="button" id="profil_button">
+<a href="{% url 'profil_bearbeiten' %}">Profil bearbeiten</a>
+</button>
+</div>
+<h1>Deine Beiträge: </h1>
+<div class="posts">
+        {% for bild, info in posts.items %}
+<div class="post-inhalt">
+<img src="/static/images/{{ bild }}" alt ="Bild">
+<p style = "margin-top: 5px;">{{ info.beschreibung }}</p>
+</div>
+        {% endfor %}
+</div>
+</div>
+</body>
+</html>

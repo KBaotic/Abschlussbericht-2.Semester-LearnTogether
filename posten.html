@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posten</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+</head>
+
+<body>
+
+<!-- Logo + Name und Profil bearbeiten -->
+
+<div id="header">
+    <div id="logo">
+        <img src="{% static 'design_images/logo.jpg' %}" alt="Logo">  
+        <span id="logo-text">LearnTogether</span>
+    </div>
+
+    <div id="profilbearbeiten">
+        <button type="button">
+            <a href="{% url 'profil' %}">Profil</a>
+        </button>
+    </div>
+</div>
+
+<!-- Sidebar -->
+    <div id="navigation">
+        <a href="{% url 'startseite' %}"><img src="{% static 'design_images/bild_haus.jpg' %}" alt="Home"></a>
+        <a href="{% url 'posten' %}"><img src="{% static 'design_images/bild_erstellen.jpg' %}" alt="Hinzufügen"></a>
+        <a href="{% url 'ueber_uns' %}"><img src="{% static 'design_images/bild_ueber_uns.jpg' %}" alt="Benutzer"></a>
+    </div>
+
+
+<!-- Hauptinhalt -->
+<div class="hauptinhalt">
+    <h1>Post erstellen </h1>
+
+    <form id="forms" method="POST" enctype="multipart/form-data" action="{% url 'upload' %}">
+        {% csrf_token %}
+        <div class="form">
+            <label for="titel">Titel:</label>
+            <input type="text" id="titel" name="titel" placeholder="Titel vom Post..." required>
+        </div>
+
+        <div class="form">
+            <label for="photo">Upload: </label>
+            <input
+                type="file"
+                id="photo"
+                name="datei"
+                accept="image/*" required>
+        </div>
+
+        <div class="buttons">
+            <button type="reset">Zurücksetzen</button>
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Posten</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
+
+       

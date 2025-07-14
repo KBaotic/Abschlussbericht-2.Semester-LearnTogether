@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+</head>
+
+<body style="display: flex; justify-content: center;">
+
+<!-- Hauptinhalt -->
+
+<section id="login">
+    <div id="login-content">
+        <div id="logo">
+            <img src="{% static 'design_images/logo.jpg' %}" alt="Logo"> 
+            <span id="logo-text">LearnTogether</span>
+        </div>
+            <p style="font-weight: bold;">Anmelden</p>
+            <form method="POST" action="" id="login-text">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Anmelden</button>
+            </form>
+            <p style="font-size: 12px; font-weight: bold; margin-top: 40px;">Du hast noch kein Konto? <a href="{% url 'registrieren' %}">Registrieren</a></p>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Details</title>
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+
+<a href="{% url 'startseite' %}" class="zurueck-button">Zurück zur Startseite</a>
+<div class="kommentar-seite">
+  <div class="post-bereich">
+    <img src="/static/images/{{ bildname }}" alt="Bild">
+    <h2>{{ info.beschreibung }}</h2>
+    <p style="color:gray;">Von: {{ info.benutzer }}</p>
+  </div>
+
+  <div class="kommentar-bereich">
+    <h3>Kommentare:</h3>
+    <div id="comments">
+      {% for comment in kommentare %}
+        <p><strong>{{ comment.benutzer }}:</strong> {{ comment.text }}</p>
+      {% empty %}
+        <p style="color:gray;">Noch keine Kommentare</p>
+      {% endfor %}
+    </div>
+
+    <textarea id="new-comment" placeholder="Kommentar schreiben..."></textarea><br>
+    <button onclick="saveComment()">Speichern</button>
+  </div>
+</div>
+<script>
+function saveComment() {
+  const newComment = document.getElementById("new-comment").value;
+
+  fetch("{% url 'save_comment' %}", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRFToken": "{{ csrf_token }}"
+    },
+    body: JSON.stringify({
+      "bild": "{{ bildname }}",
+      "comment": newComment
+    })
+  }).then(() => {
+    location.reload();  // Seite neu laden, um Kommentar anzuzeigen
+  });
+}
+</script>
+
+</body>
+</html>

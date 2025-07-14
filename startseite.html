@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Startseite</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+</head>
+
+<body>
+
+<!-- Logo + Name und Profil bearbeiten -->
+
+<div id="header">
+    <div id="logo">
+        <img src="{% static 'design_images/logo.jpg' %}" alt="Logo"> 
+        <span id="logo-text">LearnTogether</span>
+    </div>
+
+    <div id="profilbearbeiten">
+        <button type="button">
+            <a href="{% url 'profil' %}">Profil</a>
+        </button>
+    </div>
+</div>
+
+<!-- Navigation an der Seite -->
+    <div id="navigation">
+        <a href="{% url 'startseite' %}"><img src="{% static 'design_images/bild_haus.jpg' %}" alt="Home"></a>
+        <a href="{% url 'posten' %}"><img src="{% static 'design_images/bild_erstellen.jpg' %}" alt="Hinzufügen"></a>
+        <a href="{% url 'ueber_uns' %}"><img src="{% static 'design_images/bild_ueber_uns.jpg' %}" alt="Benutzer"></a>
+    </div>
+
+
+<!-- Hauptinhalt -->
+<div class="hauptinhalt">
+    <h1 style="text-align: center; font-size: 40px;">Herzlich willkommen auf der Lernplattform für alle! 
+        <img src="{% static 'design_images/achtung.png' %}" style="height: 35px; width: 35px;"></h1>
+    </h1>
+    <h2 style="color: #6EB5C0;">Gemeinsam lernen, Wissen teilen und Zukunft gestalten - jederzeit und überall.<br></h2>
+    <p style="margin-left: 40px; margin-top: 50px;"><img src="{% static 'design_images/finger-hoch.png' %}" style="height: 30px; width: 30px;"> Entdecken spannende Beiträge, die genau zu deinem Lernstil passen:<br>
+    </p>
+
+    <div class="posts">
+        {% for bild, info in posts.items %}
+            <div class="post-inhalt">
+                <a href="{% url 'post_detail' bild %}">
+                    <img src="/static/images/{{bild}}" alt="Bild">
+                </a>
+                <p class="post-benutzer"> <strong> Von: </strong> {{ info.benutzer }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

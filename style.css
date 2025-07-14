@@ -1,0 +1,414 @@
+body {
+    background-color: rgb(242, 247, 209);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-left: 80px;
+}
+
+/* Logo in Sidebar */
+#logo{
+    display: flex;
+    align-items: center;
+    /*position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex; */
+}
+
+#logo img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#logo-text {
+    font-size: 23px;
+    font-weight: bold;
+    color: #006C84;
+    /* margin-top: 35px; */
+}
+
+/* Sidebar */
+#navigation {
+    position: fixed;
+    top: 0px;
+    width: 80px;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+#navigation a {
+    margin: 12px 0;
+}
+
+#navigation img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Profil bearbeiten */
+#profilbearbeiten {
+    position: absolute;
+    top: 10px;
+    right: 120px;
+}
+
+#profilbearbeiten button{
+    background-color: #FFCCBB;
+    border: none;
+    font-size: 18px;
+    border-radius: 7px;
+    padding: 10px 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#logout{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#logout button{
+    background-color: #FFCCBB;
+    border: none;
+    font-size: 18px;
+    border-radius: 7px;
+    padding: 10px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+
+a:link{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+a:active{
+    text-decoration: none;
+    color: black;
+}
+
+/* Hauptinhalt */
+.hauptinhalt {
+    margin-left: 100px;
+    padding: 20px;
+}
+h1 {
+    color: #006C84;
+    margin-top: 85px;
+    font-size: 22px;
+}
+
+p {
+    color:black;
+    font-size: 17px;
+}
+
+h2 {
+     color:black;
+     font-weight: bold;
+     font-size: 17px;
+     text-align: center;
+}
+h3 {
+    color:black;
+    font-size: 22px;
+}
+
+/* Über uns */
+.Personen {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.Person {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Person img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+
+/* Posten */
+
+.form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    flex-direction: column;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+button:hover {
+    background-color: #FFCCBB;
+    border-radius: 8px;
+}
+
+/* Login */
+
+/*section*/
+#login {
+    padding: 80px;
+    margin: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ #login-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -100px;
+ }
+ /*form*/
+ #login-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+input {
+    padding: 10px;
+    font-size: 14px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Profil bearbeiten */
+#profil_kopfzeile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#profilbild {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#profildaten {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto;
+}
+
+#profil_button {
+    margin-left: auto;
+    padding: 8px 16px;
+}
+/* Registrierung */
+/*section*/
+#registrieren {
+    padding: 80px;
+    margin: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ #registrierung-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -20px;
+ }
+ /*form*/
+ #registrierung-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: -10px;
+    padding-bottom: -80px;
+    align-items: center;
+}
+input {
+    
+    font-size: 14px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Startseite */
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.post-inhalt {
+  width: calc(33.33% - 20px);
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.post-inhalt img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.post-inhalt p {
+  margin: 8px;
+  font-size: 14px;
+}
+
+.post-benutzer {
+  font-size: 12px;
+  color: gray;
+}
+.kommentar-seite {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+}
+.post-bereich {
+    background-color: #fffaf6;
+    padding: 10px;
+    border-radius: 10px;
+    width: 420px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.post-bereich img {
+    width: 100%;             
+    max-height: 400px;       
+    object-fit: contain;     
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.kommentar-bereich {
+    flex: 0 0 30%;
+    background-color: #ffe6d9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kommentar-bereich textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.kommentar-bereich button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #FFCCBB;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#comments p {
+    margin: 8px 0;
+}
+
+#new-comment {
+    width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ffccb3;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f7b998;
+}
+
+a.zurueck-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #FFCCBB;
+    border-radius: 7px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+a.zurueck-button:hover {
+    background-color: #f7b998;
+}

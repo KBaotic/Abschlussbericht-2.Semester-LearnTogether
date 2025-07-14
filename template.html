@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}" />
+    </head>
+    <body>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="datei">
+            <input type="text" name="beschreibung">
+            <button type="submit">Hochladen</button>
+        </form>
+        {% for eintrag, beschreibung in dictionary.items %}
+        <img src="static/images/{{ eintrag }}" style="width: 500px">
+        <p>{{beschreibung}}</p>
+        {% endfor %}
+    </body>
+</html>

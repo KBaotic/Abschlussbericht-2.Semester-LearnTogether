@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Über_uns</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+</head>
+
+<body>
+
+<!-- Logo + Name und Profil bearbeiten -->
+
+<div id="header">
+    <div id="logo">
+        <img src="{% static 'design_images/logo.jpg' %}" alt="Logo">  
+        <span id="logo-text">LearnTogether</span>
+    </div>
+
+    <div id="profilbearbeiten">
+        <button type="button">
+            <a href="{% url 'profil' %}">Profil</a>
+        </button>
+    </div>
+</div>
+
+<!-- Navigation an der Seite -->
+    <div id="navigation">
+        <a href="{% url 'startseite' %}"><img src="{% static 'design_images/bild_haus.jpg' %}" alt="Home"></a>
+        <a href="{% url 'posten' %}"><img src="{% static 'design_images/bild_erstellen.jpg' %}" alt="Hinzufügen"></a>
+        <a href="{% url 'ueber_uns' %}"><img src="{% static 'design_images/bild_ueber_uns.jpg' %}" alt="Benutzer"></a>
+    </div>
+
+
+
+<!-- Hauptinhalt -->
+<div class="hauptinhalt">
+    <h1>Über uns: </h1>
+    <br>
+        <p>Learntogether ist eine offene Bildungsplattform, die Menschen aus allen Bereichen des Lernens verbindet
+           von Schüler:innen über Studierende bis hin zu Lehrkräften und Expert:innen.
+           Unser Ziel ist es, Wissen gemeinsam zugänglich zu machen, zu teilen und zu diskutieren.</p>
+        
+        <p>Egal ob Mathematik, Geschichte oder ganz andere Themen – bei Learntogether können alle Inhalte posten,
+           kommentieren und voneinander lernen. Wir glauben daran, dass Bildung am besten funktioniert, wenn wir sie gemeinsam gestalten.</p>
+        <br>
+        <h2> Lernen war noch nie so vernetzt.</h2><br><br>
+
+       <h3>Das sind wir:</h3>
+</div>
+
+<div class="Personen">
+    <div class="Person">
+    <img src="{% static 'design_images/Emely.jpg' %}" alt="Person 1" >
+    <span class="Personen-name">Emely Mayer</span>
+    </div>
+
+    <div class="Person">
+    <img src="{% static 'design_images/Claire.jpg' %}" alt="Person 2" >
+    <span class="Personen-name">Claire Dörr</span>
+    </div>
+
+    <div class="Person">
+    <img src="{% static 'design_images/Kristina.jpg' %}" alt="Person 3" >
+    <span >Kristina Baotic</span>
+    </div>
+
+</div>  
+
+</body>
+</html>
+
+       
