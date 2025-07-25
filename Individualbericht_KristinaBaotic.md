@@ -1,7 +1,9 @@
-# Abschlussbericht Software Engineering 2-LearnTogether <img src="logo.jpg" alt="Logo" width="100" style="float: right; display: block; margin-bottom: 10px;">
-<br>
+# Abschlussbericht Software Engineering 2-LearnTogether 
+ ![Logo](https://github.com/KBaotic/Abschlussbericht-2.Semester-LearnTogether/blob/main/logo.jpg?raw=true)
+
 
 ## Projektidee und Zielsetzung
+
 
 Im Rahmen des Moduls "Software Engineering 2" haben wir als Dreierteam das Webprojekt "LearnTogether" entwicklet. Die Idee ist aus einer sehr persönlichen Erfahrung enstanden. Uns selbst fällt es im Studium manchmal schwer, uns allein zum Lernen zu motivieren. In Gesprächen haben wir festgestellt, dass viele andere Studierende und auch Schülerinnen und Schüler ähnliche Probleme haben. Die Probleme waren immer gleich: fehlende Struktur, mangelnde Motivation oder das Gefühl, mit Fragen allein zu sein. Daraus hat sich unser Wunsch entwickelt, eine Plattform zu schaffen, die gemeinsames, digitales Lernen unterstützt.
 
@@ -46,7 +48,8 @@ Hier ein Ausschnitt aus dem HTML-Template der Basisseite:
     </div>
 </div>
 ```
-Und ein Auszug aus dem zugehörigen CSS:
+Und ein Auszug aus dem zugehörigen CSS:  
+
 
 ```css
 body {
@@ -84,6 +87,12 @@ body {
 ```
  
 Außerdem war ich für die zentrale CSS-Datei zuständig, die wir kontinuierlich erweitert und gepflegt haben. Auf Basis dieser Struktur konnten alle weiteren HTML-Seiten das Layout übernehmen und lediglich ihren jeweiligen Hauptinhalt anpassen. Damit war das Frontend technisch frühzeitig solide aufgestellt und hat eine klare Struktur geliefert.
+Auf dieser Grundlage habe ich anschließend die Startseite erstellt, die als Einstiegspunkt für die Plattform dient. 
+
+Im Folgenden ist ein Screenshot der Startseite zu sehen:
+
+![Startseite-Screenshot](https://github.com/KBaotic/Abschlussbericht-2.Semester-LearnTogether/blob/main/startseite.png?raw=true)
+
 
 Ein weiteres zentrales Element war die Registrierungsseite. Hier ein Auszug aus dem entsprechenden HTML-Code:
 
@@ -136,6 +145,9 @@ Diese Seite ermöglicht die Eingabe grundlegender Nutzerdaten wie Name, Geburtsd
 ```
 
 Durch die wechselseitige Verlinkung konnten Benutzerinnen und Benutzer einfach zwischen Registrierung und Anmeldung wechseln. Beide Seiten greifen auf das gemeinsame Layout und CSS zurück und bieten somit eine konsistente Nutzererfahrung.
+Nachfolgend ist ein Screenshot der Login-Seite zu sehen, der das Design und die Nutzerführung exemplarisch veranschaulicht:
+
+![Login-Seite](https://github.com/KBaotic/Abschlussbericht-2.Semester-LearnTogether/blob/main/login.png?raw=true)
 
 
 
